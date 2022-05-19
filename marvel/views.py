@@ -16,8 +16,8 @@ def home(request):
             try:
                 print(str(request.POST['search']))
 
-                publicKey = '7e7f54fed420a83880c1e46f8e66cc62'
-                privateKey = 'e92d37bb7c7dcaaa9d17dd693b7b41c44891f3ea'
+                publicKey = config('PUKEY')
+                privateKey = config('PVKEY')
                 
                 m= hashlib.md5() # Chama a Função para criptografia
                 ts = str(time.time()) # coleta o tempo atual
